@@ -1,4 +1,4 @@
-**SVR Active-Set Training Toolbox (MATLAB)**
+# **SVR Active-Set Training Toolbox (MATLAB)**
 
 This repository contains a custom implementation of **Support Vector Regression (SVR)** trained using the **Active-Set method**. The toolbox includes scripts for synthetic data generation, hyperparameter optimisation (model selection), scalability benchmarks, and analysis of initial active-set configurations.
 
@@ -7,9 +7,8 @@ This repository contains a custom implementation of **Support Vector Regression 
 * MATLAB (R2020b or later recommended)
 * **Optimisation Toolbox**: Required only for comparing results with the built-in quadprog solver in ...QP.m scripts.
 
-## ---
 
-**Main Scripts**
+# **Main Scripts**
 
 These scripts are designed to be executed directly from the MATLAB command window.
 
@@ -40,9 +39,8 @@ Evaluates the computational performance as the dataset size ($N$) increases.
 * **Usage**: \[f\_l, time\_l, it\_cost\_l, n\_it\_l\] \= Scalability(x\_l, x\_u, eps, C, e, beta, perc\_l, perc\_u)
 * **Functionality**: Runs the training process on increasing dataset sizes (from 10 to 700 points). It performs 10 attempts for each size to calculate the mean and standard deviation of execution time and cost per iteration.
 
-## ---
 
-**Core Components**
+# **Core Components**
 
 ### **SVR.m (Class Definition)**
 
@@ -59,9 +57,8 @@ Generates synthetic data using a combination of sine waves:
 $$y \= a\_1\\sin(k\_1x) \+ a\_2\\sin(k\_2x) \+ \\text{noise}$$
 This ensures consistent data across all benchmarking scripts.
 
-## ---
 
-**Technical Notes**
+# **Technical Notes**
 
 * **Initialisation**: The SVR class supports three initialisation modes: "standard" (random), "perc" (percentage-based active sets), and "fix" (specific indices).
 * **Precision**: The algorithm uses a tolerance based on $10^{-14} \\times C$ to determine if variables are "touching" the boundaries.
