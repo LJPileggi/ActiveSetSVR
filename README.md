@@ -55,6 +55,7 @@ The central engine of the toolbox. It handles:
 Generates synthetic data using a combination of sine waves:
 
 $$y \= a\_1\\sin(k\_1x) \+ a\_2\\sin(k\_2x) \+ \\text{noise}$$
+
 This ensures consistent data across all benchmarking scripts.
 
 
